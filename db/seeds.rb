@@ -8,3 +8,5 @@
 (1..5).each do |index|
   Product.find_or_create_by(name: "Product #{index}", price: index * 5)
 end
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
